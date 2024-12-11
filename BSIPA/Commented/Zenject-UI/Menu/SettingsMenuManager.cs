@@ -10,7 +10,7 @@ namespace UnnamedPlugin.Menu
         private readonly BSMLSettings bsmlSettings;
         
         private const string MenuName = nameof(UnnamedPlugin);
-        private const string ResourcePath = nameof(UnnamedPlugin) + ".Menu.BSML.example.bsml";
+        private const string ResourcePath = nameof(UnnamedPlugin) + ".Menu.example.bsml";
         
         // Zenject will inject our ExampleSettingsMenu instance on this object's creation.
         // BSMLSettings is bound by BSML. SiraUtil also lets us inject services from other mods.

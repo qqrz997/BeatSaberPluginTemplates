@@ -8,7 +8,7 @@ namespace UnnamedPlugin.Menu
         private static ExampleSettingsMenu SettingsMenuInstance { get; set; }
         
         private const string MenuName = nameof(UnnamedPlugin);
-        private const string ResourcePath = nameof(UnnamedPlugin) + ".Menu.BSML.example.bsml";
+        private const string ResourcePath = nameof(UnnamedPlugin) + ".Menu.example.bsml";
         
         /// <summary>
         /// Adds a custom menu in the Mod Settings section of the main menu.
