@@ -1,14 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
-  <Import Project="Project.Name.csproj.user" Condition="Exists('Project.Name.csproj.user')" />
+  <Import Project="BarePlugin.csproj.user" Condition="Exists('BarePlugin.csproj.user')" />
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
+    <!--#if (EnableHints) -->
     <!-- Some features of the latest version of C# aren't available in Beat Saber. Refer to the unity docs for info -->
     <!-- https://docs.unity3d.com/2022.3/Documentation/Manual/CSharpCompiler.html -->
+    <!--#endif -->
     <LangVersion>latest</LangVersion>
+    <!--#if (Nullable) -->
+    <Nullable>enable</Nullable>
+    <!--#else -->
     <Nullable>disable</Nullable>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <!--#endif -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
     <FrameworkPathOverride>$(BeatSaberDir)\Beat Saber_Data\Managed</FrameworkPathOverride>
     <MarkPackageReferencesAsExternallyResolved>false</MarkPackageReferencesAsExternallyResolved>
@@ -19,6 +25,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BarePlugin.csproj.user" Condition="Exists('BarePlugin.csproj.user')" />
   </ItemGroup>
 
   <ItemGroup>

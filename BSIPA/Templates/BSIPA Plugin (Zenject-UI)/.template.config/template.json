@@ -5,12 +5,12 @@
     "Common", 
     "Library"
   ],
-  "identity": "BSIPA.Plugin.Bare",
-  "name": "BSIPA Plugin (Bare)",
+  "identity": "BSIPA.Plugin.Zenject-UI",
+  "name": "BSIPA Plugin (Zenject-UI)",
   "defaultName": "BeatSaberPlugin",
-  "description": "A bare-minimum template for a new Beat Saber IPA mod.",
-  "shortName": "bsbare",
-  "sourceName": "BarePlugin",
+  "description": "A template for a new Beat Saber IPA mod with a basic Zenject and UI setup using SiraUtil and BeatSaberMarkupLanguage.",
+  "shortName": "bszenjectui",
+  "sourceName": "ZenjectMenuPlugin",
   "tags": {
     "language": "C#",
     "type": "project",

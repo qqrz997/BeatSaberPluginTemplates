@@ -5,12 +5,12 @@
     "Common", 
     "Library"
   ],
-  "identity": "BSIPA.Plugin.Bare",
-  "name": "BSIPA Plugin (Bare)",
+  "identity": "BSIPA.Plugin.UI",
+  "name": "BSIPA Plugin (UI)",
   "defaultName": "BeatSaberPlugin",
-  "description": "A bare-minimum template for a new Beat Saber IPA mod.",
-  "shortName": "bsbare",
-  "sourceName": "BarePlugin",
+  "description": "A template for a new Beat Saber IPA mod with a basic UI setup using BeatSaberMarkupLanguage.",
+  "shortName": "bsui",
+  "sourceName": "MenuPlugin",
   "tags": {
     "language": "C#",
     "type": "project",

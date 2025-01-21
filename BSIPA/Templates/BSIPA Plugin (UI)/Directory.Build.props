@@ -4,8 +4,8 @@
 
   <!-- Plugin Metadata -->
   <PropertyGroup>
-    <PluginId>BarePlugin</PluginId>
-    <PluginName>BarePlugin</PluginName>
+    <PluginId>MenuPlugin</PluginId>
+    <PluginName>MenuPlugin</PluginName>
     <Authors>{ModAuthor}</Authors>
     <Version>{ModVersion}</Version>
     <GameVersion>{GameVersion}</GameVersion>
@@ -19,6 +19,7 @@
   <!-- Plugin Dependencies -->
   <ItemGroup>
     <DependsOn Include="BSIPA" Version="^4.3.0"/>
+    <DependsOn Include="BeatSaberMarkupLanguage" Version="^1.12.0"/>
   </ItemGroup>
   
   <PropertyGroup>
