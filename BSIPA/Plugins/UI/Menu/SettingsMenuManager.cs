@@ -5,7 +5,7 @@ namespace MenuPlugin.Menu;
 
 internal static class SettingsMenuManager
 {
-    private static ExampleSettingsMenu SettingsMenuInstance { get; set; }
+    private static ExampleSettingsMenu? Instance { get; set; }
         
     private const string MenuName = nameof(MenuPlugin);
     private const string ResourcePath = nameof(MenuPlugin) + ".Menu.example.bsml";
@@ -16,20 +16,19 @@ internal static class SettingsMenuManager
     /// </summary>
     public static void AddSettingsMenu()
     {
-        if (SettingsMenuInstance == null)
+        if (Instance == null)
         {
-            SettingsMenuInstance = new GameObject(nameof(ExampleSettingsMenu)).AddComponent<ExampleSettingsMenu>();
-            Object.DontDestroyOnLoad(SettingsMenuInstance.gameObject);
+            Instance = new GameObject(nameof(ExampleSettingsMenu)).AddComponent<ExampleSettingsMenu>();
+            Object.DontDestroyOnLoad(Instance.gameObject);
         }
             
         RemoveSettingsMenu();
             
-        BSMLSettings.Instance.AddSettingsMenu(
-            MenuName, ResourcePath, SettingsMenuInstance);
+        BSMLSettings.Instance.AddSettingsMenu(MenuName, ResourcePath, Instance);
     }
 
     public static void RemoveSettingsMenu()
     {
-        BSMLSettings.Instance.RemoveSettingsMenu(SettingsMenuInstance);
+        BSMLSettings.Instance.RemoveSettingsMenu(Instance);
     }
 }

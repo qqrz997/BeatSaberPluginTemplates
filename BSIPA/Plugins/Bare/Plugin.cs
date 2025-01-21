@@ -4,10 +4,10 @@ using IpaLogger = IPA.Logging.Logger;
 
 namespace BarePlugin;
 
-[Plugin(RuntimeOptions.SingleStartInit)]
+[Plugin(RuntimeOptions.DynamicInit)]
 internal class Plugin
 {
-    internal static IpaLogger Log { get; private set; }
+    internal static IpaLogger Log { get; private set; } = null!;
 
     // Methods with [Init] are called when the plugin is first loaded by IPA.
     // All the parameters are provided by IPA and are optional.
@@ -17,7 +17,6 @@ internal class Plugin
     public Plugin(IpaLogger ipaLogger, PluginMetadata pluginMetadata)
     {
         Log = ipaLogger;
-            
         Log.Info($"{pluginMetadata.Name} {pluginMetadata.HVersion} initialized.");
     }
         

@@ -9,7 +9,7 @@ namespace MenuPlugin;
 
 internal class MenuPluginController : MonoBehaviour
 {
-    public static MenuPluginController Instance { get; private set; }
+    private static MenuPluginController? Instance { get; set; }
         
     /// <summary>
     /// Called a single time by Unity when this script is created.

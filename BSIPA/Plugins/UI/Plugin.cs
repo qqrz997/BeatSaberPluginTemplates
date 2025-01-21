@@ -7,10 +7,11 @@ using IpaConfig = IPA.Config.Config;
 
 namespace MenuPlugin;
 
-[Plugin(RuntimeOptions.SingleStartInit)]
+[Plugin(RuntimeOptions.DynamicInit)]
 internal class Plugin
 {
-    internal static IpaLogger Log { get; private set; }
+    internal static IpaLogger Log { get; private set; } = null!;
+    internal static PluginConfig Config { get; private set; } = null!;
 
     // Methods with [Init] are called when the plugin is first loaded by IPA.
     // All the parameters are provided by IPA and are optional.
@@ -20,9 +21,9 @@ internal class Plugin
     public Plugin(IpaLogger ipaLogger, IpaConfig ipaConfig, PluginMetadata pluginMetadata)
     {
         Log = ipaLogger;
-            
+        
         // Creates an instance of PluginConfig used by IPA to load and store config values
-        PluginConfig.Instance = ipaConfig.Generated<PluginConfig>();
+        Config = ipaConfig.Generated<PluginConfig>();
             
         Log.Info($"{pluginMetadata.Name} {pluginMetadata.HVersion} initialized.");
     }

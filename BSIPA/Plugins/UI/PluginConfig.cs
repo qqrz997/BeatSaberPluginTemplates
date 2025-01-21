@@ -6,8 +6,6 @@ namespace MenuPlugin;
 
 internal class PluginConfig
 {
-    public static PluginConfig Instance { get; set; }
-        
     // Members must be 'virtual' if you want BSIPA to detect a value change and save the config automatically
     // You can assign a default value to be used when the config is first created by assigning one after '=' 
     // examples:
