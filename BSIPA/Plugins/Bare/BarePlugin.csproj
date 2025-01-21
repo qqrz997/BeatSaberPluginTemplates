@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="BarePlugin.csproj.user" />
+    <None Include="BarePlugin.csproj.user" Condition="Exists('BarePlugin.csproj.user')" />
   </ItemGroup>
 
   <ItemGroup>
