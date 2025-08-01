@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
-  <Import Project="BarePlugin.csproj.user" Condition="Exists('BarePlugin.csproj.user')" />
+  <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="BarePlugin.csproj.user" Condition="Exists('BarePlugin.csproj.user')" />
+    <None Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
   </ItemGroup>
 
   <ItemGroup>

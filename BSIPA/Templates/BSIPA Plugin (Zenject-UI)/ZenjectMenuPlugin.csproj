@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="ZenjectMenuPlugin.csproj.user" Condition="Exists('ZenjectMenuPlugin.csproj.user')" />
+  <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="ZenjectMenuPlugin.csproj.user" Condition="Exists('ZenjectMenuPlugin.csproj.user')" />
+    <None Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
   </ItemGroup>
 
   <ItemGroup>

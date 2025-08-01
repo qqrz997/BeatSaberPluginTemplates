@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="MenuPlugin.csproj.user" Condition="Exists('MenuPlugin.csproj.user')" />
+  <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="MenuPlugin.csproj.user" Condition="Exists('MenuPlugin.csproj.user')" />
+    <None Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')"/>
   </ItemGroup>
 
   <ItemGroup>
